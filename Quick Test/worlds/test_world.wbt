@@ -1,0 +1,37 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/mercedes_benz/MercedesBenzSprinterSimple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.07019149572949201 0.06554448284710207 -0.9953778552366749 1.643821923206511
+  position -30.180312623002788 13.665928983366554 8.466165718203506
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+WoodenBox {
+  translation -0.0542059 -13.898 1.1
+  rotation 0 0 -1 0.281432
+  size 2 2 2
+}
+WoodenBox {
+  translation 16.7676 16.6891 1.1
+  name "wooden box(1)"
+  size 2 2 2
+}
+MercedesBenzSprinterSimple {
+  translation -29.7628 -14.8465 1.55
+  color 0 0 0.4
+  wheelBoundingObject TRUE
+}
+Floor {
+  size 500 500
+}

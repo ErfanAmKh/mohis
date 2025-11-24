@@ -1,0 +1,76 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/bmw/BmwX5.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/StraightRoadSegment.proto"
+
+WorldInfo {
+  FPS 30
+  contactProperties [
+    ContactProperties {
+      material1 "Tire"
+      material2 "costum"
+      forceDependentSlip [
+        0.2
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.20052609493991466 -0.06085790932997493 0.977796297865835 3.7185564841721126
+  position 15.540757037653673 6.362410804619139 5.264222303459398
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+BmwX5 {
+  hidden position_0_0 -1.933055026714407e-09
+  hidden position2_0_0 545.4659455729268
+  hidden position_0_1 -2.0198271066396443e-09
+  hidden position2_0_1 545.6399801519033
+  hidden position_0_2 445.9148022195438
+  hidden position_0_3 445.4777308190158
+  hidden position_0_9 0.40133782767956705
+  hidden rotation_1 9.665275133572036e-10 -1 -1.4574034036112195e-09 5.1120091554823475
+  hidden rotation_2 -1.0099135533198222e-09 1 -1.8549305372549387e-09 5.286043734458836
+  hidden rotation_3 0 -1 0 0.5267627232797478
+  hidden rotation_4 0 -1 0 0.5064028230796839
+  hidden translation_24 -0.028648772346776763 0.8152687609564272 -0.03215678528719801
+  hidden rotation_24 0.7466598432279095 0 -0.6652060421485011 0.4013378276795667
+  translation 4.42678 -1.64311 0.469208
+  rotation 0.003309355548218692 -0.013743627792284961 0.9999000754380223 0.4726176398806558
+  controller "my_controller_test2"
+  sensorsSlotFront [
+    Lidar {
+      fieldOfView 3.14
+      numberOfLayers 1
+      maxRange 30
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 0.9 0 -0.2
+      contactMaterial "Tire"
+      fieldOfView 1.5
+      width 1000
+      height 1000
+    }
+  ]
+  sensorsSlotCenter [
+    InertialUnit {
+    }
+    GPS {
+    }
+  ]
+}
+WoodenBox {
+  translation 5.4115 -23.4095 1.84
+  size 5 5 10
+}
+StraightRoadSegment {
+  roadBoundingObject TRUE
+  contactMaterial "costum"
+}
